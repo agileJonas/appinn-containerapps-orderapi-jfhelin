@@ -39,4 +39,10 @@ app.post('/store', (req, res) => {
     console.log(`Received new item from ${req.ip}, content: ${JSON.stringify(req.body)}`)
 });
 
+function addNumbers(x, y) {
+  return x + y;
+}
+
+addNumbers(2, 3);
+
 app.listen(port, () => console.log(`Node App listening on port ${port}!`));
