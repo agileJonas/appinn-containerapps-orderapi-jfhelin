@@ -23,12 +23,14 @@ const app = express();
 app.use(express.json());
 
 const port = 3000;
-
+const user;
 var store = [
 
 ]
 
 app.get('/store', (_req, res) => {
+    user = JSON.parse(localStorage.getItem('user'));
+    const u2 = JSON.parse(localStorage.getItem('user'));
     res.json(store)
     console.log(`List of items in the store requested by ${_req.ip}`)
 });
